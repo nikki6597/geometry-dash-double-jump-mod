@@ -1,0 +1,64 @@
+{
+	"geode": "5.10.1",
+	"gd": {
+		"android": "2.2081"
+	},
+	"id": "yourname.platformer-double-jump",
+	"name": "Platformer Double Jump",
+	"version": "v1.0.0",
+	"developer": "Andrey",
+	"description": "I Wanna Be The Guy style double jump for platformer mode. Just tap the screen in the air.",
+	"settings": {
+		"enabled": {
+			"type": "bool",
+			"name": "Double Jump",
+			"description": "Turn the mod on or off.",
+			"default": true
+		},
+		"platformer-only": {
+			"type": "bool",
+			"name": "Platformer Only",
+			"description": "Only work in platformer levels.",
+			"default": true
+		},
+		"mode": {
+			"type": "string",
+			"name": "Mode",
+			"description": "<cg>Tap</c>: one tap = one air jump.\n<cy>Hold</c>: tap in the air, then keep holding to keep flying up for a moment (like the robot).",
+			"default": "Tap",
+			"one-of": ["Tap", "Hold"]
+		},
+		"air-jumps": {
+			"type": "int",
+			"name": "Air Jumps",
+			"description": "How many extra jumps you get in the air. 1 = double jump, 2 = triple jump...",
+			"default": 1,
+			"min": 1,
+			"max": 10
+		},
+		"jump-power": {
+			"type": "float",
+			"name": "Jump Power",
+			"description": "Strength of the air jump. 1.0 = same as a normal jump.",
+			"default": 1.0,
+			"min": 0.5,
+			"max": 2.0
+		},
+		"hold-time": {
+			"type": "float",
+			"name": "Hold Time (sec)",
+			"description": "Hold mode: how long you can keep flying while holding.",
+			"default": 0.3,
+			"min": 0.05,
+			"max": 1.5
+		},
+		"hold-power": {
+			"type": "float",
+			"name": "Hold Power",
+			"description": "Hold mode: climb speed while holding (fraction of a normal jump).",
+			"default": 0.4,
+			"min": 0.1,
+			"max": 1.0
+		}
+	}
+}
